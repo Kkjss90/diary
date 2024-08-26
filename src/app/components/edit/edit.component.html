@@ -1,0 +1,24 @@
+<div class="edit-container">
+  <form (ngSubmit)="saveEntry()">
+    <label>
+      Заголовок:
+      <input type="text" [(ngModel)]="entry.title" name="title" required>
+    </label>
+
+    <label>
+      Содержимое:
+      <textarea [(ngModel)]="entry.content" name="content" required></textarea>
+    </label>
+
+    <div class="file-input">
+      <label>
+        Прикрепить изображение:
+        <input type="file" (change)="handleFileInput($event)">
+      </label>
+    </div>
+    <div class="image-preview">
+      <img *ngIf="entry.image" [src]="entry.image" alt="Attached Image">
+    </div>
+    <button type="submit">Сохранить</button>
+  </form>
+</div>

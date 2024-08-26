@@ -1,0 +1,18 @@
+<div class="diary-container">
+  <div>
+    <button class="create-button" (click)="createEntry()">Создать запись</button>
+    <button class="create-button" (click)="logout()">Logout</button>
+  </div>
+  <div *ngFor="let entry of entries" class="entry">
+    <div class="entry-content">
+      <h2>{{ entry.title }}</h2>
+      <p>{{ entry.content }}</p>
+      <div class="entry-image"><img *ngIf="entry.image" [src]="entry.image" alt="Attached Image"></div>
+      <div class="entry-time"><p><small>{{ entry.date | date:'medium' }}</small></p></div>
+      <div class="entry-actions">
+        <button (click)="deleteEntry(entry.id)">Удалить</button>
+        <a [routerLink]="['/edit', entry.id]">Редактировать</a>
+      </div>
+    </div>
+  </div>
+</div>

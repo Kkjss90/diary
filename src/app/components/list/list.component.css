@@ -1,0 +1,56 @@
+.diary-container {
+  padding: 20px;
+  background-color: #7d7d7d;
+  min-height: 100vh;
+}
+
+.diary-container .create-button {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.diary-container .entry {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.diary-container .entry-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.diary-container .entry-content p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.diary-container .entry-image {
+  width: 150px;
+  height: 150px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  border-radius: 8px;
+}
+
+.diary-container .entry-time {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
